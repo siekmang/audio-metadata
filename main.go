@@ -17,14 +17,14 @@ type AudioMetadata struct {
 	Title       string `json:"title"`
 	Artist      string `json:"artist"`
 	Album       string `json:"album"`
-	Year        int64    `json:"year"`
+	Year        int64  `json:"year"`
 	Genre       string `json:"genre"`
 	Duration		string `json:"duration"`
-	Channels		int64		 `json:"channels"`
-	SampleRate	int64    `json:"sample_rate"`
-	BitRate     int64    `json:"bit_rate"`
-	Track       int64    `json:"track"`
-	TotalTracks int64		 `json:"total_tracks"`
+	Channels		int64	 `json:"channels"`
+	SampleRate	int64  `json:"sample_rate"`
+	BitRate     int64  `json:"bit_rate"`
+	Track       int64  `json:"track"`
+	TotalTracks int64	 `json:"total_tracks"`
 	FileType    string `json:"file_type"`
 }
 
