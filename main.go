@@ -26,16 +26,33 @@ type AudioMetadata struct {
 	FileType    string `json:"file_type,omitempty"`
 }
 
+// Helper function calling exiftool's GetString function
+//
+// file - exiftool.FileMetadata - The metadata pulled from a file
+//
+// key - string - the key for the metadata string we want to pull
+//
+// returns a string that represents a certain piece of metadata about an audio file
 func getString(file exiftool.FileMetadata, key string) string {
     v, _ := file.GetString(key)
     return v
 }
 
+// Helper function calling exiftool's GetInt function
+//
+// file - exiftool.FileMetadata - The metadata pulled from a file
+//
+// key - string - the key for the metadata string we want to pull
+//
+// returns an int64 that represents a certain piece of metadata about an audio file
 func getInt(file exiftool.FileMetadata, key string) int64 {
     v, _ := file.GetInt(key)
     return v
 }
 
+// Prompts user to select a batch of audio files, uses exiftool to pull metadata from those files, then maps that data and ouputs a JSON file
+//
+// return is void
 func main() {
 	var metadata []AudioMetadata
 
@@ -45,8 +62,6 @@ func main() {
 	}
 
 	defer et.Close()
-
-	// User Selects Files
 	paths, ok := tinyfiledialogs.OpenFileDialog(
 		"Select Audio Files",
 		"",
