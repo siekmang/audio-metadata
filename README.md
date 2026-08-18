@@ -26,7 +26,7 @@ graph TD
 
 ## Quick Start
 
-1. Close the repository.
+1. Clone the repository.
 ```bash
    git clone https://github.com/siekmang/audio-metadata.git
    cd audio-metadata
