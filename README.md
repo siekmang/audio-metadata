@@ -23,7 +23,7 @@ graph TD
 * **Go** (1.20+)
 * **ExifTool** must be installed on your system PATH (`brew install exiftool` on macOS, or download via [exiftool.org](https://exiftool.org/)).
 * **Cgo Requirements:** GCC/Clang compiler enabled (standard on macOS/Linux; required for `tinyfiledialogs` C-bindings).
-* 
+
 ## Quick Start
 
 1. Close the repository.
@@ -41,6 +41,8 @@ graph TD
 ```bash
   ./audio-metadata
 ```
+
+*Note - On your first time running it, it will prompt you to select an output location. It saves that location so you don't have to set it every time.*
 
 ## Example Output
 
@@ -79,10 +81,12 @@ graph TD
 
 - [x] *Add Documentation* - There are a few functions and places where comments may be valuable
 - [x] *Expand README*
-- [ ] *Unique File Names* - Expand file name to have date/time
-- [ ] *File Location* - Print where the file saved to
+- [x] *File Location* - Print where the file saved to
+- [x] *Unique File Names* - Expand file name to have date/time
+- [x] *Location Choice* - Give user choice of output file location
 - [ ] *Data Validation* - Allow the user to set desired parameters to test against
 - [ ] *Data Normalization* - Introduce the ability to correct parameters if they are incorrect
 - [ ] *Type Choice* - Give user choice of output file type
-- [ ] *Location Choice* - Give user choice of output file location
+- [ ] *Test Coverage* - Write tests for functionality
+- [ ] *Flags* - Introduce flags for a smoother command line experience
 - [ ] *Explore Goroutines* - To improve performance for large libraries, look into goroutines and worker pools
